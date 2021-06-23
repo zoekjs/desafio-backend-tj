@@ -1,0 +1,13 @@
+{
+  "type": "mongodb",
+  "host": "localhost",
+  "port": 27017,
+  "database": "weather_status",
+  "entities": ["src/**/*.entity.ts"],
+  "synchronize": false,
+  "migrationsTableName": "migrations",
+  "migrations": ["src/database/migrations/*.ts"],
+  "cli": {
+      "migrationsDir": "src/database/migrations"
+  }
+}
