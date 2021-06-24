@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { Response } from 'express';
 import { WeatherStatus } from '../entities/weatherStatus.entity';
 import { ReadWeatherStatusDto } from '../dto/ReadWeatherStatusDTO.dto';
 import { HttpRequestService } from './http-request.service';
@@ -13,13 +12,11 @@ export class WeatherService {
   constructor(@InjectRepository(WeatherStatus) private weatherStatusRepository: Repository < WeatherStatus > ,
     private httpRequestService: HttpRequestService) {}
 
-  private citiesWeatherStatus: ReadWeatherStatusDto[] = [];
-
   async getCitiesWeatherStatus(cities: string[]): Promise < ReadWeatherStatusDto[] > {
     return Promise.all(cities.map(async city => {
-      const existedWeatherStatus = await this.getWeatherStatus(city);
-      const weatherStatus: ReadWeatherStatusDto = (existedWeatherStatus)
-        ? existedWeatherStatus
+      const existWeatherStatus = await this.getWeatherStatus(city);
+      const weatherStatus: ReadWeatherStatusDto = (existWeatherStatus)
+        ? existWeatherStatus
         : await this.createWeatherStatus(city)
       return weatherStatus;
     }))
