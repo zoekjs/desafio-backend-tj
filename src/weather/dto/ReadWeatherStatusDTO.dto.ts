@@ -24,5 +24,9 @@ export class ReadWeatherStatusDto {
   private readonly tempMax: number;
 
   @Expose()
+  @IsString()
+  private readonly units: string;
+
+  @Expose()
   private readonly created_at: Date;
 }
