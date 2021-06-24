@@ -9,6 +9,19 @@ api/weather (POST) recibe por body un arreglo con las ciudades a consultar
 api/docs (documentación de la API con swagger)
 ```
 
+## Ejemplos de respuesta
+
+- api/weather/lima
+
+![2021-06-24_17-07](https://user-images.githubusercontent.com/5410296/123332642-c4074000-d50e-11eb-8491-01ac89d15b16.png)
+
+- api/weather (POST) consulta por Santiago y Londres:
+
+![2021-06-24_17-06](https://user-images.githubusercontent.com/5410296/123332702-db462d80-d50e-11eb-9d79-c940bc856eb0.png)
+
+![2021-06-24_17-06_1](https://user-images.githubusercontent.com/5410296/123332722-e1d4a500-d50e-11eb-93ba-cacff84a3454.png)
+
+
 
 ## Cómo probar el proyecto ?
 - Clonar el proyecto:
