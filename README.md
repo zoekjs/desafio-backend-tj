@@ -1,3 +1,32 @@
+# Desafío Backend TimeJobs
+
+API de consultas de temperatura mediante una API externa de [OpenWeather](http://openweathermap.org/api)
+
+## Endpoints
+```
+api/weather/{ciudad} Consulta la temperatura de una ciudad en especifíco
+api/weather (POST) recibe por body un arreglo con las ciudades a consultar
+api/docs (documentación de la API con swagger)
+```
+
+
+## Cómo probar el proyecto ?
+- Clonar el proyecto:
+```bash
+git clone https://github.com/zoekjs/desafio-backend-tj
+```
+
+- Instalar dependecias, dentro de la carpeta clonada ejecutar el comando:
+```bash
+npm install
+```
+
+- Para ejecutar el proyecto ejecutar el siguiente comando en la terminal:
+```bash
+npm run start:dev
+```
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
