@@ -12,7 +12,8 @@ import { ResponseTimeMiddleware } from '@nest-middlewares/response-time';
     HttpModule
   ],
   controllers: [WeatherController],
-  providers: [WeatherService, HttpRequestService]
+  providers: [WeatherService, HttpRequestService],
+  exports: [TypeOrmModule]
 })
 export class WeatherModule {
   configure(consumer: MiddlewareConsumer) {
